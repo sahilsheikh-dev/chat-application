@@ -19,6 +19,9 @@ body {
 	line-height: 1.58;
 	color: #f1f1f1;
 	background-color: #010101;
+	background-image: url('../img/bg.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 100%;
 }
 
@@ -134,13 +137,11 @@ button.accent {
 
 .chat-container {
 	max-width: 700px;
+	height: calc(100% - 60px);
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #010101;
 	margin-top: 30px;
-	height: calc(100% - 60px);
-	max-height: 100%;
-	position: relative;
 	overflow-y: hidden;
 }
 
@@ -149,7 +150,7 @@ button.accent {
 	background-color: #010101;
 	margin: 0;
 	overflow: auto;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	padding: 0 20px 0px 20px;
 	height: calc(100% - 150px);
 }
@@ -160,7 +161,6 @@ button.accent {
 
 #chat-page ul li {
 	line-height: 1.5rem;
-	padding: 10px 20px;
 	margin: 0;
 	border-bottom: 1px solid #010101;
 }
@@ -171,18 +171,15 @@ button.accent {
 
 #chat-page .event-message {
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	clear: both;
 }
 
 #chat-page .event-message p {
-	color: #f1f1f1;
-	font-size: 14px;
 	word-wrap: break-word;
 }
 
 #chat-page .chat-message {
-	padding-left: 68px;
 	position: relative;
 }
 
@@ -190,15 +187,14 @@ button.accent {
 	position: absolute;
 	width: 42px;
 	height: 42px;
-	overflow: hidden;
 	left: 10px;
+	line-height: 42px;
+	font-size: 18px;
+	overflow: scroll;
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 18px;
-	line-height: 42px;
 	color: #010101;
-	text-align: center;
-	border-radius: 50%;
+	text-align: left;
 	font-style: normal;
 	text-transform: uppercase;
 }
@@ -242,6 +238,11 @@ button.accent {
 	position: absolute;
 	top: 65px;
 	width: 100%;
+}
+
+.message-input {
+	background-color: #010101;
+	color: #f1f1f1;
 }
 
 
